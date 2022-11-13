@@ -132,14 +132,4 @@ def start_clean_folder():
 
 
 if __name__ == '__main__':
-    if START_PATH := chek_start():
-        # создаём папки для сортировки
-        for fl in EXTENSION_DICT.keys():
-            ff = Path(START_PATH, fl)
-            if not ff.is_dir():
-                ff.mkdir()
-        # запускаем функцию работы с папками
-        is_folder(START_PATH)
-        input('Сортировка завершена успешно. Для выхода нажмите Enter')
-    else:
-        input('Для выхода нажмите Enter')
+    start_clean_folder()
